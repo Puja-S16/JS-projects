@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="maindiv">
+    <form>
+    
+    
+    <div id="one">
+      
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="user-name" required><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="e-mail" placeholder="email@example.com" required><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="pass-word" required><br>
+
+      <label for="Cpassword">Confirm Password:</label>
+      <input type="password" id="Cpassword" name="confirm-pass-word" required><br>
+      <button type="button"id="next1">Next</button>
+
+    </div>
+
+
+<br>
+
+
+    <div id="two">
+
+      <label for="name">Name:</label>
+      <input id="name" type="text" name="name" required><br>
+
+      <label for="dob">Date of birth:</label>
+      <input id="dob" type="date" name="d-o-b" required><br>
+
+      <label for="sex">Sex:</label >
+      <select id="sex" name="sex">
+        <option value="">---choose one---</option>
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+        <option value="O">Other</option>
+      </select><br>
+      <button type="button"id="previous1">Previous</button>
+      <button type="button"id="next2">Next</button>
+    </div>
+    
+
+
+
+<br>
+
+
+
+    <div id="three">
+
+      <p>where would you like your notifications? Feel free to choose multiple options or none!</p>
+      <input id="noti1" type="checkbox" name="notifications" value="email">
+      <label for="noti1">Email</label>
+
+      <input id="noti2" type="checkbox" name="notifications" value="message">
+      <label for="noti2">Message</label>
+
+      <input id="noti3" type="checkbox" name="notifications" value="whatsapp">
+      <label for="noti3">WhatsApp</label><br>
+
+      <p>What fields are you interested in? Select one!</p>
+      
+      <input id="f1" type="radio" name="fields" value="coding">
+      <label for="f1">Coding</label>
+      <input id="f2" type="radio" name="fields" value="ai">
+      <label for="f2">Artificial Intelligence</label>
+      <input id="f3" type="radio" name="fields" value="ml">
+      <label for="f3">Machine Learning</label>
+      <input id="f4" type="radio" name="fields" value="design">
+      <label for="f4">Design</label> <br>
+
+      <button type="button" id="previous2">Previous</button>
+      <button type="submit" id="submit">Submit</button>
+    </div>
+    
+
+
+
+  </form>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
+
+
+
+<!-- Label ka for aur Input ki id bilkul same honi chahiye. -->
+
+<!-- name : Agar aapne likha <input name="user_age">, toh submit karne par server ko milega: user_age = 25. -->
+
+
+ <!-- 
+Jab humein user ko bahut saari choices mein se ek choice select karne ko dena hota hai (aur hum screen par zyada jagah waste nahi karna chahte), tab hum <select> aur <option> ka use karte hain. 
+  -->
+  
+  
+  <!--
+   Radio buttons tab use hote hain jab aap chahte ho ki user di gayi list mein se sirf ek option chune. 
+   -->
+   <!-- 
+   Checkboxes tab use hote hain jab user ek, ek se zyada, ya ek bhi nahi option chun sakta hai. 
+   -->
+
+   <!-- 
+   
+Browser mein ek default behaviour hota hai: Form ke andar koi bhi button ho, browser use "Submit" button samajhta hai.
+
+Problem: Jab tum JS likhoge aur "Next" button dabaoge, toh page refresh ho jayega aur tumhara saara data gayab ho jayega.
+
+Solution: Sirf aakhri button (Submit) ka type submit hona chahiye. Baaki saare "Next" aur "Previous" buttons mein tumhe type="button" likhna padega.
+
+   -->

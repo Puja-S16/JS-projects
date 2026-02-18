@@ -1,0 +1,17 @@
+body{
+  background-color: black;
+  color: aquamarine;
+  
+}
+div{
+  padding: 10px 10px 10px 10px;
+  
+}
+
+#two{
+  display: none;
+  
+}
+#three{
+  display: none;
+}
