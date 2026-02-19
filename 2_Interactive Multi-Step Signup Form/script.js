@@ -2,15 +2,15 @@
 const next1=document.getElementById("next1");
 next1.addEventListener('click',(event)=>{
 
-  // const un=document.getElementById("username");
-  // const email=document.getElementById("email");
-  // const pass=document.getElementById("password");
-  // const Cpass=document.getElementById("Cpassword");
+  const un=document.getElementById("username");
+  const email=document.getElementById("email");
+  const pass=document.getElementById("password");
+  const Cpass=document.getElementById("Cpassword");
 
-  // if(un.value.trim()=="" ||email.value.trim()=="" ||pass.value.trim()=="" ||pass.value.trim()!=Cpass.value || !email.value.includes("@")||!email.value.includes(".")){
-  //   alert("fill the form correctly!");
-  //   return;
-  // }
+  if(un.value.trim()=="" ||email.value.trim()=="" ||pass.value.trim()=="" ||pass.value.trim()!=Cpass.value || !email.value.includes("@")||!email.value.includes(".")){
+    alert("fill the form correctly!");
+    return;
+  }
 
   const div1=document.getElementById("one");
   const div2=document.getElementById("two");
@@ -29,10 +29,10 @@ next2.addEventListener('click',(event)=>{
   const dob=document.getElementById("dob");
   const sex=document.getElementById("sex");
 
-  // if(name.value.trim()=="" ||dob.value=="" ||sex.value.trim()==""){
-  //   alert("fill the form correctly!");
-  //   return;
-  // }
+  if(name.value.trim()=="" ||dob.value=="" ||sex.value.trim()==""){
+    alert("fill the form correctly!");
+    return;
+  }
 
   const div2=document.getElementById("two");
   div2.style="display: none";
@@ -71,11 +71,11 @@ previous2.addEventListener('click',(event)=>{
 const form= document.querySelector('form');
 const submitButton=document.getElementById('submit1');
 submitButton.addEventListener('click',(event)=>{
-  // const selectedField = document.querySelector('input[name="fields"]:checked');
-  // if (!selectedField) {
-  //     alert("Bhai, kam se kam ek field toh select karo!");
-  //     return;
-  // }
+  const selectedField = document.querySelector('input[name="fields"]:checked');
+  if (!selectedField) {
+      alert("Bhai, kam se kam ek field toh select karo!");
+      return;
+  }
   const div3=document.getElementById("three");
   div3.style="display:none";
   const div_r=document.getElementById("div-review");
