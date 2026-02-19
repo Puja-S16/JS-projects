@@ -7,8 +7,11 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <div class="progress-bar-container">
+    <div id="progress-bar"></div>
+  </div>
   <div id="maindiv">
-    <form>
+    <form id="f1">
     
     
     <div id="one">
@@ -29,16 +32,13 @@
     </div>
 
 
-<br>
-
-
     <div id="two">
 
       <label for="name">Name:</label>
       <input id="name" type="text" name="name" required><br>
 
       <label for="dob">Date of birth:</label>
-      <input id="dob" type="date" name="d-o-b" required><br>
+      <input id="dob" type="date" name="dob" required><br>
 
       <label for="sex">Sex:</label >
       <select id="sex" name="sex">
@@ -54,7 +54,7 @@
 
 
 
-<br>
+
 
 
 
@@ -82,13 +82,32 @@
       <label for="f4">Design</label> <br>
 
       <button type="button" id="previous2">Previous</button>
-      <button type="submit" id="submit">Submit</button>
+      <button type="button" id="submit1">Submit</button>
     </div>
     
 
 
+    <div id="div-review" style="display: none;">
+      <h3>Form review!</h3>
+      <p >Name : <span id="r-name"></span></p>
+      <p >DOB : <span id="r-dob"></span></p>
+      <p >Sex : <span id="r-sex"></span></p>
+      <p >Email : <span id="r-email"></span></p>
+      <p >interested fields : <span id="r-fields"></span></p>
+      <p >notifications : <span id="r-noti"></span></p>
+      <button  type="button"id="back">Back to form</button>
+      <button type="submit" id="submit-final">Confirm</button>
+    </div>
+
+
+
 
   </form>
+
+
+ 
+
+
   </div>
   <script src="./script.js"></script>
 </body>
