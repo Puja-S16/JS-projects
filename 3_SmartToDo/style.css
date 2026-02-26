@@ -1,3 +1,8 @@
+/* Apni CSS ke sabse upar ye universal selector daal do. Isse padding add karne par tumhare elements ki width "failti" nahi hai: */
+* {
+  box-sizing: border-box;
+}
+
 body{
   height: 100vh;
   background-color:#000;
@@ -16,23 +21,75 @@ h1{
   color: #000;
   font-size: large;
   border-radius: 5px;
+  padding: 5px;
   border:none;
+}
+/* mast */
+#add-task-input:focus {
+  box-shadow: 0 0 10px #ebb2e5;
+  border: 1px solid beige;
 }
 
 
 #add-task-button{
-  background-color: #000;
-  color: beige;
+  background-color: #ebb2e5;
+  color: black;
   border-radius: 5px;
   border-color: #ebb2e5;
   border-style: solid;
-  width: 50px;
+  width: auto;
+  padding: 8px 15px; /* Button ko saans lene ki jagah do */
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+  transition: all 0.2s ease;
+
 }
 #add-task-button:active{
   
-  background-color: beige;
-  color: #000;
-  transition: ease-in 1ms;
+  background-color: #000;
+  color: #ebb2e5;
 }
 
+.delete-task-button{
+  background-color: #ebb2e5;
+  color: black;
+  border-radius: 5px;
+  border-color: beige;
+  border-style: solid;
+  width: auto;
+  padding: 8px 15px; /* Button ko saans lene ki jagah do */
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  transition: all 0.2s ease;
+
+}
+.delete-task-button:active{
+  background-color: #000;
+  color: #ebb2e5;
+}
+
+li{
+  border: beige;
+  background-color: #ebb2e5;
+  color: #000;
+  font-size: large;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  margin-left: 0px;
+
+
+  display: flex;
+  justify-content: space-between; /* Text left, Button right */
+  align-items: center;           /* Dono ek line mein vertical center */
+  min-width: 300px;              /* Taaki saare tasks ek hi width ke hon */
+  
+}
+
+.checked{
+  text-decoration: line-through;
+  opacity: 0.6;
+  filter: grayscale(1); /* Thoda feeka kar do taaki focus naye tasks par rahe */
+}
+#task-list {
+    padding: 0;
+}
